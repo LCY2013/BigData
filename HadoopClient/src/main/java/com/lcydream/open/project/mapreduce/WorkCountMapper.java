@@ -37,7 +37,7 @@ public class WorkCountMapper extends Mapper<LongWritable,Text,Text,IntWritable>{
         //将maptask传给我们的文本内容先转换成String
         String line = value.toString();
         //根据空格将这一行切分成单词
-        String[] words = line.split("");
+        String[] words = line.split(" ");
 
         //将单词输出为<单词,1>
         for(String word : words){
